@@ -105,4 +105,21 @@ public class Employee {
             SqlRunner.closeConnection();
         }
     }
+
+    public void department(){
+        String sql = String.format("SELECT * FROM departments WHERE id = %d;", this.department.getId());
+        ResultSet rs = SqlRunner.executeQuery(sql);
+        try{
+            while(rs.next()){
+                String title = rs.getString("title");
+                System.out.println(title);
+            }
+        } catch (Exception e){
+            System.err.println(e.getClass().getName() + " : " + e.getMessage());
+            System.exit(0);
+        } finally {
+            SqlRunner.closeConnection();
+        }
+
+    }
 }

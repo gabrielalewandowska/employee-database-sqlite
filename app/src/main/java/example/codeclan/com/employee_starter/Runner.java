@@ -36,12 +36,14 @@ public class Runner {
         employee5.save();
         employee6.save();
         employee7.save();
+        employee8.save();
 //        employee8.delete();
 //        Employee.all();
 //        department1.delete();
 //        Department.all();
-        Employee.findByName("Lucy Findlay");
-        Department.findByName("Finance");
+//        Employee.findByName("Lucy Findlay");
+//        Department.findByName("Finance");
+        employee8.department();
 
     }
 }
